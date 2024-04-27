@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Explanation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Explaining Caesar Cipher</h1>
+        <p>
+            Caesar Cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet. Let's see an example of how it works:
+        </p>
+        <p>
+            Suppose we want to encrypt the message "HELLO" using a Caesar Cipher with a shift of 3. Here's how it would look:
+        </p>
+        <div class="code">
+            <p><strong>Plain Text:</strong> HELLO</p>
+            <p><strong>Shift:</strong> 3</p>
+            <p><strong>Cipher Text:</strong> KHOOR</p>
+        </div>
+        <p>
+            In this example, each letter in "HELLO" is shifted 3 positions down the alphabet, so "H" becomes "K", "E" becomes "H", and so on.
+        </p>
+        <p>
+            The decryption process is simply the reverse of encryption. If we have the cipher text "KHOOR" and we know it was encrypted using a Caesar Cipher with a shift of 3, we simply shift each letter 3 positions up the alphabet to get back the original message "HELLO".
+        </p>
+    </div>
+    <div>
+        <h2>Caesar Cipher Encryption and Decryption</h2>
+        <label for="plaintext">Plaintext:</label>
+        <input type="text" id="plaintext" [(ngModel)]="plaintext">
+        <br>
+        <label for="shift">Shift:</label>
+        <input type="number" id="shift" [(ngModel)]="shift">
+        <br>
+        <button (click)="caesarEncrypt()">Encrypt</button>
+        <br>
+        <label for="ciphertext">Ciphertext:</label>
+        <textarea id="ciphertext" [(ngModel)]="ciphertext" rows="4" cols="50" readonly></textarea>
+        <br>
+        <br>
+        <button (click)="caesarDecrypt()">Decrypt</button>
+        <p>decrypting above text</p>
+        <label for="decrypttext">Decrypted text:</label>
+        <textarea id="decrypttext" [(ngModel)]="decrypttext" rows="4" cols="50" readonly></textarea>
+    </div>   
+    <div>
+        <h2>Quiz for Caesar Cipher</h2>
+        <p>1. The Caesar Cipher is a substitution cipher.</p>
+        <label><input type="radio" name="caesarQ1" [(ngModel)]="caesarQ1Answer" [value]="true"> True</label>
+        <label><input type="radio" name="caesarQ1" [(ngModel)]="caesarQ1Answer" [value]="false"> False</label>
+        <p *ngIf="caesarQuizResult1 !== null">Your answer is {{ caesarQuizResult1 }}</p>
+        <p>2. In the Caesar cipher, each letter in the plaintext is shifted a fixed number of positions down or up the alphabet.</p>
+        <label><input type="radio" name="caesarQ2" [(ngModel)]="caesarQ2Answer" [value]="true"> True</label>
+        <label><input type="radio" name="caesarQ2" [(ngModel)]="caesarQ2Answer" [value]="false"> False</label>
+        <p *ngIf="caesarQuizResult2 !== null">Your answer is {{ caesarQuizResult2 }}</p>
+        <p>3. The Caesar cipher is named after Julius Caesar, who is known to have used this encryption technique.</p>
+        <label><input type="radio" name="caesarQ3" [(ngModel)]="caesarQ3Answer" [value]="true"> True</label>
+        <label><input type="radio" name="caesarQ3" [(ngModel)]="caesarQ3Answer" [value]="false"> False</label>
+        <p *ngIf="caesarQuizResult3 !== null">Your answer is {{ caesarQuizResult3 }}</p>
+        <p>4. The Caesar cipher is a highly secure encryption method that is difficult to crack.</p>
+        <label><input type="radio" name="caesarQ4" [(ngModel)]="caesarQ4Answer" [value]="true"> True</label>
+        <label><input type="radio" name="caesarQ4" [(ngModel)]="caesarQ4Answer" [value]="false"> False</label>
+        <p *ngIf="caesarQuizResult4 !== null">Your answer is {{ caesarQuizResult4 }}</p>
+        <p>5. The Caesar cipher has only 25 possible keys since there are 26 letters in the English alphabet. </p>
+        <label><input type="radio" name="caesarQ5" [(ngModel)]="caesarQ5Answer" [value]="true"> True</label>
+        <label><input type="radio" name="caesarQ5" [(ngModel)]="caesarQ5Answer" [value]="false"> False</label>
+        <p *ngIf="caesarQuizResult5 !== null">Your answer is {{ caesarQuizResult5 }}</p>
+        <p>6. The Caesar cipher is considered a form of symmetric encryption, where the same key is used for both encryption and decryption. </p>
+        <label><input type="radio" name="caesarQ6" [(ngModel)]="caesarQ6Answer" [value]="true"> True</label>
+        <label><input type="radio" name="caesarQ6" [(ngModel)]="caesarQ6Answer" [value]="false"> False</label>
+        <p *ngIf="caesarQuizResult6 !== null">Your answer is {{ caesarQuizResult6 }}</p>
+        <button (click)="checkCaesarQuiz()">Check Quiz</button>
+        
+    </div>          
+</body>
+</html>

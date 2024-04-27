@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+p {
+    line-height: 1.6;
+}
+.code {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+div {
+max-width: 400px;
+margin: auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+/* Style for labels */
+label {
+display: inline-block;
+margin-bottom: 5px;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="number"] {
+width: calc(50% - 5px); /* Adjust width to fit two inputs in a row */
+padding: 8px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+/* Style for the encrypt and decrypt buttons */
+button {
+display: inline-block;
+width: calc(50% - 5px); /* Adjust width to fit two buttons in a row */
+padding: 10px;
+margin-bottom: 10px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+/* Style for the ciphertext textarea */
+textarea {
+width: 100%;
+padding: 8px;
+margin-top: 10px;
+border: 1px solid #ccc;
+border-radius: 3px;
+resize: none; /* Prevent resizing */
+}
+
+/* Style for the container */
+div {
+max-width: 400px;
+margin: auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+/* Style for labels */
+label {
+display: block;
+margin-bottom: 10px;
+}
+
+/* Style for radio buttons */
+input[type="radio"] {
+margin-right: 5px;
+}
+
+/* Style for the check button */
+button {
+display: block;
+width: 100%;
+padding: 10px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+/* Style for quiz result */
+p {
+margin-top: 10px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monoalphabetic Cipher Explanation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Explaining Monoalphabetic Cipher</h1>
+        <p>
+            Monoalphabetic Cipher is a substitution cipher where each letter in the plaintext is mapped to another letter in a one-to-one fashion. Let's see an example of how it works:
+        </p>
+        <p>
+            Suppose we want to encrypt the message "HELLO" using a Monoalphabetic Cipher with the following substitution mapping:
+        </p>
+        <div class="code">
+            <p><strong>Plain Text:</strong> HELLO</p>
+            <p><strong>Substitution Mapping:</strong></p>
+            <p>A - H</p>
+            <p>B - E</p>
+            <p>C - L</p>
+            <p>D - O</p>
+            <p>E - R</p>
+            <p>...</p>
+        </div>
+        <p>
+            In this example, each letter in "HELLO" is substituted according to the mapping provided, resulting in the cipher text.
+        </p>
+        <p>
+            Decryption in Monoalphabetic Cipher involves knowing the substitution mapping used for encryption. By reversing the substitution, we can decrypt the message.
+        </p>
+    </div>
+    <div>
+        <h2>Monoalphabetic Cipher Encryption and Decryption</h2>
+        <label for="plaintext">Plaintext:</label>
+        <input type="text" id="plaintext" [(ngModel)]="plaintext">
+        <br>
+        <label for="key">Key:</label>
+        <input type="text" id="key" [(ngModel)]="key">
+        <br>
+        <button (click)="monoalphabeticEncrypt()">Encrypt</button>
+        <br>
+        <label for="ciphertext">Ciphertext:</label>
+        <textarea id="ciphertext" [(ngModel)]="ciphertext" rows="4" cols="50" readonly></textarea>
+        <br>
+        <br>
+        <button (click)="monoalphabeticDecrypt()">Decrypt</button>
+        <p>decrypting above text</p>
+        <label for="decrypttext">Decrypted text:</label>
+        <textarea id="decrypttext" [(ngModel)]="decrypttext" rows="4" cols="50" readonly></textarea>
+    </div>
+    <div>
+        <h2>Quiz for Monoalphabetic Cipher</h2>
+        <p>1. The Monoalphabetic Cipher uses a fixed substitution alphabet.</p>
+        <label><input type="radio" name="monoalphabeticQ1" [(ngModel)]="monoalphabeticQ1Answer" [value]="true"> True</label>
+        <label><input type="radio" name="monoalphabeticQ1" [(ngModel)]="monoalphabeticQ1Answer" [value]="false"> False</label>
+        <p *ngIf="monoalphabeticQuizResult1 !== null">Your answer is {{ monoalphabeticQuizResult1 }}</p>
+        <p>2. In the monoalphabetic cipher, the key is a single fixed substitution alphabet.</p>
+        <label><input type="radio" name="monoalphabeticQ2" [(ngModel)]="monoalphabeticQ2Answer" [value]="true"> True</label>
+        <label><input type="radio" name="monoalphabeticQ2" [(ngModel)]="monoalphabeticQ2Answer" [value]="false"> False</label>
+        <p *ngIf="monoalphabeticQuizResult2 !== null">Your answer is {{ monoalphabeticQuizResult2 }}</p>
+        <p>3. Unlike the Caesar cipher, the monoalphabetic cipher allows for multiple possible keys.</p>
+        <label><input type="radio" name="monoalphabeticQ3" [(ngModel)]="monoalphabeticQ3Answer" [value]="true"> True</label>
+        <label><input type="radio" name="monoalphabeticQ3" [(ngModel)]="monoalphabeticQ3Answer" [value]="false"> False</label>
+        <p *ngIf="monoalphabeticQuizResult3 !== null">Your answer is {{ monoalphabeticQuizResult3 }}</p>
+        <p>4. The monoalphabetic cipher is resistant to frequency analysis attacks.</p>
+        <label><input type="radio" name="monoalphabeticQ4" [(ngModel)]="monoalphabeticQ4Answer" [value]="true"> True</label>
+        <label><input type="radio" name="monoalphabeticQ4" [(ngModel)]="monoalphabeticQ4Answer" [value]="false"> False</label>
+        <p *ngIf="monoalphabeticQuizResult4 !== null">Your answer is {{ monoalphabeticQuizResult4 }}</p>
+        <p>5. The monoalphabetic cipher is also known as the Vigenère cipher.</p>
+        <label><input type="radio" name="monoalphabeticQ5" [(ngModel)]="monoalphabeticQ5Answer" [value]="true"> True</label>
+        <label><input type="radio" name="monoalphabeticQ5" [(ngModel)]="monoalphabeticQ5Answer" [value]="false"> False</label>
+        <p *ngIf="monoalphabeticQuizResult5 !== null">Your answer is {{ monoalphabeticQuizResult5 }}</p>
+        <p>6. The monoalphabetic cipher is relatively easy to crack compared to more complex encryption methods.</p>
+        <label><input type="radio" name="monoalphabeticQ6" [(ngModel)]="monoalphabeticQ6Answer" [value]="true"> True</label>
+        <label><input type="radio" name="monoalphabeticQ6" [(ngModel)]="monoalphabeticQ6Answer" [value]="false"> False</label>
+        <p *ngIf="monoalphabeticQuizResult6 !== null">Your answer is {{ monoalphabeticQuizResult6 }}</p>
+      
+        <button (click)="checkMonoalphabeticQuiz()">Check Quiz</button>
+    </div>            
+</body>
+</html>
+
